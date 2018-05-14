@@ -1,0 +1,25 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title></title>
+</head>
+<body>
+<!--{foreach item=index from=$keyid}
+字:{$index.word}
+詞性: {$index.type}<br>
+{/foreach}-->
+
+{foreach item=index2 from=$output}
+<div class="goods story">
+第{$index2.number}筆---!!!<br>
+產品編號: {$index2.id}<br>
+<div class="goodsid">
+{$index2.idname}<br></div>
+產品名稱: {$index2.name}<br>
+產品描述:<br> {$index2.des}<br>
+符合關鍵字個數: {$index2.keynum}<br><br>
+</div>
+{/foreach}
+
+</body>
+</html>
