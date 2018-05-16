@@ -95,7 +95,7 @@ for($k=$productnum; $k>0; $k--) {
 		 //echo "score = $scores[0]";
 		if($k==$scores[$m]){
 			$temptid=$products[$m];
-			$sql3 = "SELECT product_name,product_description,product_alias FROM ".$prefix_word."_hikashop_product where product_id = '$temptid'"; //SQL 語法
+			$sql3 = "SELECT product_name,product_description,product_alias,product_code FROM ".$prefix_word."_hikashop_product where product_id = '$temptid'"; //SQL 語法
 
 			$product_detail=mysqli_query($conn, $sql3);
 			if ($product_detail->num_rows > 0) {
@@ -103,12 +103,13 @@ for($k=$productnum; $k>0; $k--) {
 				$productname=$row2[product_name];
 				$productdescription=$row2[product_description];
 				$producthref=$row2[product_alias];
+				$productcode=$row2[product_code];
 			}
 			$newproducthref="$products[$m]"."-"."$producthref";
 			//echo "<div class=goods>";
 			//echo "第"."$n"."筆"."<br>";
 
-			$output[$outputindex]['number']=$n;//第幾筆
+			$output[$outputindex]['number']="12345";//第幾筆
 
 			//echo "產品編號:"."$products[$m]"."<br>";
 
@@ -129,6 +130,8 @@ for($k=$productnum; $k>0; $k--) {
 			//echo "符合關鍵字個數:"."$k"."<br>";
 
 			$output[$outputindex]['keynum']=$k;//符合關鍵字個數
+
+			$output[$outputindex]['code']="../../lt_envico/images/com_hikashop/upload/thumbnails/300x300f/".$productcode.".jpg";
 
 			$outputindex++;
 			$n++;

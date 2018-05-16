@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.31, created on 2018-05-14 05:46:49
+<?php /* Smarty version 2.6.31, created on 2018-05-16 07:51:44
          compiled from keyword_search.html */ ?>
 <!DOCTYPE HTML>
 <html>
@@ -24,11 +24,13 @@
 ?>
 <div class=goods>
 <div class="spotlight">
+<div class="image">
+<img src="<?php echo $this->_tpl_vars['index2']['code']; ?>
+">
+</div>
 <div class="content">
 <h3>第<?php echo $this->_tpl_vars['index2']['number']; ?>
 筆</h3><br>
-<h3>產品編號: <?php echo $this->_tpl_vars['index2']['id']; ?>
-</h3><br>
 <div class=goodsid>
 <h3><?php echo $this->_tpl_vars['index2']['idname']; ?>
 </h3><br></div>

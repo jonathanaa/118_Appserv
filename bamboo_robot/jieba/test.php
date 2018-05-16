@@ -106,7 +106,7 @@ for($k=$productnum; $k>0; $k--) {
 			//echo "<div class=goods>";
 			//echo "第"."$n"."筆"."<br>";
 
-			$output[$outputindex]['number']=$n;//第幾筆
+			$output[$outputindex]['number']="123";//第幾筆
 
 			//echo "產品編號:"."$products[$m]"."<br>";
 
